@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Create Object from JSON String</h2>
+
+<p id="demo"></p>
+<!-- <script type="text/javascript" language="javascript" src="jquery-1.8.2.min.js"></script>         -->
+<!-- <script type="text/javascript" src="JavaScript Advanced 02 - Higher-Order Functions - Exercises - Mock Data.json"></script> -->
+<!-- var Data = JSON.parse(JavaScript Advanced 02 - Higher-Order Functions - Exercises - Mock Data); -->
+
+<!-- 
+<script>
+var data=fs.readFileSync('JavaScript Advanced 02 - Higher-Order Functions - Exercises - Mock Data.json', 'utf8');
+var obj=JSON.parse(data);
+document.getElementById("demo").innerHTML = obj.id;
+</script> -->
+
+
+<!-- <script type="text/javascript">
+    $(document).ready(function(e) {
+          alert(id);
+    });
+ </script> -->
+ <script>
+      var text = '{"users":[' +
+      '{"id":1 ,"first_name":"John"},' +
+      '{"id":2 ,"first_name":"Smith" },' +
+      '{"id":3 ,"first_name":"John1" }]}';
+      
+      obj = JSON.parse(text);
+      document.getElementById("demo").innerHTML =
+      obj.users[1].id + " " + obj.users[1].first_name;
+      </script>
+</body>
+</html>
