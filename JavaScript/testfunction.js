@@ -88,15 +88,108 @@ function myFunction(a, b) {
 // console.log(reduced);
 
 
-var initialValue = 0;
-var sum = users.reduce(
-    (accumulator, currentValue) => accumulator + currentValue.age
-    ,initialValue
-);
-const agv = sum /users.length;
 
-console.log(sum); 
-console.log(agv);
+// var sum = users.reduce(
+//     (accumulator, currentValue) => accumulator +currentValue
+//     ,
+
+// );
+//const agv = sum /users.length;
+
+//console.log(sum); 
+//console.log(agv);
+// var categories = [{
+//   type : "category1",
+//   cols : ["col A", "col B"]
+// }, {
+//   type : "category2",
+//   cols : ["col C", "col D", "col E"]
+// }, {
+//   type : "category3",
+//   cols : ["col F"]
+// }]
+
+// var myArrayBai1 = users.reduce(function(acc, category){
+//  acc = acc.concat(category.first_name+" "+category.last_name);
+//  return acc;
+// }, []);
+// //console.log(myArrayBai1); 
+
+
+// const transformed = users.map(({id, last_name: lastName, first_name: firstName,email,gender,salary }) => ({id, lastName, firstName, email,gender,salary }));
+// console.log(transformed);
+
+// users.reduce(callback[, initialValue])
+
+
+// var myArrayBai3 = users.reduce(function(acc, user){
+//   acc = acc.concat(user);
+//   return acc;
+// }, []);
+
+
+// let small_animals = users;
+
+// for (let i = 0; i < users.length; i ++) {
+//     if (users[i].age < 40 ) {
+//       var newElements = callback(users)
+
+//         small_animals.push(newElements)
+//     }
+//     return small_animals;
+// }
+//console.log(small_animals);
+ 
+// let myArray7 = users;
+// function Map1(myArray7, callback){
+//     var returnValue = []
+//     for(var i=0 ; i< myArray7.length; i++){
+//       if (myArray7[i].age < 40 && myArray7[i].gender === "Male"  ) 
+//         var newElements = callback(users)
+//       returnValue.push(newElements)
+
+//     }
+//     return returnValue
+// }
+// var x = Map1(myArray7,(a,b,c)=>{
+// //    console.log(a)
+// // console.log(b)
+// //   console.log(c)
+// });
+
+
+// let myArray8=users;
+// function filter1(myArray8,filterFunc){
+// const filterArr=[];
+// for(let i=0;i<myArray8.length;i++){
+// const result = filterFunc(myArray8[i],i,myArray8);
+// if(result)
+// filterArr.push(myArray8[i]);
+// }
+// return filterArr;
+// }
+// var x=filter1(myArray8,(a,b,c)=>{
+// console.log(a);
+// });
+// // console.log(x);
+// var initialValue = 0;
+
+// const numbers = users // sums to 100
+
+// const add = (a, b) =>
+//   a + b
+//   initialValue
+//         const sum = numbers.reduce(add)
+
+// console.log(sum);
+
+var numbers = users;
+
+var total = numbers.reduce(function(sum, value ,array) {
+return sum + value ;
+}, 0);
+
+console.log(total);
 
 
 

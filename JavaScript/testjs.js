@@ -15,9 +15,6 @@ const {users} = json;
 //     }
 // }
 
-
-  
-
 // var myArray = users;
 // function printmyArray(){
 // myArray.forEach(function(element) {
@@ -94,7 +91,7 @@ const {users} = json;
 //     });
 //    // console.log(x);
 
-var expr = '5';
+var expr = '6';
    switch (expr) {
     case '1':
         var myArray = users;
@@ -105,7 +102,7 @@ var expr = '5';
 
     case '2':            
         let myArray2 = users;
-        const ageAndGender = users => users.age < 40 && users.gender === "Female";
+        const ageAndGender = users => users.age < 40 && users.gender === "Male";
         const arr3 = myArray2.filter(ageAndGender);
         console.log('arr3', arr3);
       break;
@@ -140,30 +137,60 @@ var expr = '5';
         console.log(agv);
       break;
     case '6':
-    console.log('Cherries are $3.00 a pound.');
+    
+        var myArrayBai3 = users.reduce(function(acc, user){
+            acc = acc.concat(user);
+            return acc;
+        }, []);
+        //console.log(myArrayBai3); 
 
+                
+        var myArrayBai1 = users.reduce(function(acc, category){
+            acc = acc.concat(category.first_name+" "+category.last_name);
+            return acc;
+        }, []);
+        console.log(myArrayBai1); 
+
+
+
+        break;
     case '7':
-      
-let myArray7 = users;
-    function Map1(myArray7, callback){
-        var returnValue = []
-        for(var i=0 ; i< myArray7.length; i++){
-            var newElements = callback(myArray7[i].first_name+ '\t' +myArray7[i].last_name)
-            returnValue.push(newElements)
+        
+    let myArray7 = users;
+        function Map1(myArray7, callback){
+            var returnValue = []
+            for(var i=0 ; i< myArray7.length; i++){
+                var newElements = callback(users)
+                returnValue.push(newElements)
+            }
+            return returnValue
         }
-        return returnValue
-    }
-    var x = Map1(myArray7,(a,b,c)=>{
-        console.log(a)
-       // console.log(b)
-     //   console.log(c)
-    });
-   // console.log(x);
-
+        var x = Map1(myArray7,(a,b,c)=>{
+            console.log(a)
+        // console.log(b)
+        //   console.log(c)
+        });
+    // console.log(x);
       break;
       
       case '8':
-      console.log('Cherries are $3.00 a pound.');
+      
+        let myArray8=users;
+        function filter1(myArray8,filterFunc){
+        const filterArr=[];
+        for(let i=0;i<myArray8.length;i++){
+        const result = filterFunc(myArray8[i],i,myArray8);
+        if(result)
+        filterArr.push(myArray8[i]);
+        }
+        return filterArr;
+        }
+        var x=filter1(myArray8,(a,b,c)=>{
+        console.log(a);
+        });
+        console.log(x);
+
+
       break;
     default:
       console.log('Sorry, we are out of ' + expr + '.');
@@ -182,10 +209,7 @@ let myArray7 = users;
         //1.	Use reduce to create function sum which will calculate the sum of every item in array.
         //2.	Use reduce to create function product which will calculate the product of every item in array.
         //3.	Use reduce to create function reverse which will reverse the position of every item in array.
-
-
-
-
+        
 // function cau1(){
 //     var json = JSON.parse(data);
 // }
