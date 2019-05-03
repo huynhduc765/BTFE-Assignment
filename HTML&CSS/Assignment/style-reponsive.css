@@ -1,0 +1,254 @@
+/*BG*/
+.container{
+    max-width: 100%;
+    height: auto;
+    background-color:rgba(243, 247, 252, 0.945);
+  }
+  /*menu*/
+  div#menu{
+    width: 1300px;
+    overflow: hidden;
+    list-style-type: none;
+    height: 30px;
+    padding-top: 10px;
+  }
+  #menu a{
+    text-decoration: none;
+    margin-left: 30px; 
+  }
+  a.name{
+    padding-left: 25px;
+    font-size: large;
+    color: gray;
+  }
+  .menu-l{
+    float:left;
+  }
+  .menu-r{
+    float: right;
+  }
+  /*banner*/
+  
+  .banner{
+    background-image: url("https://s3.amazonaws.com/codecademy-content/courses/ltp/img/lodging.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    max-width: 100%;
+    height: 693px;
+  
+  }
+  .banner h2{
+    padding-top: 100px;
+    margin-left: 100px;
+  }
+  .banner p{
+    padding-left: 100px;
+  }
+  p.title{
+    padding-left: 50px;
+  }
+  h2.title{
+    padding-left: 50px;
+  }
+  .content-l{
+    float: left;
+    width: 780px;
+    margin-left: 65px;
+    display: table;
+  }
+  .content-l img{
+      margin-left: 15px;
+  }
+  .content-r{
+    float: right;
+    width: 350px;
+    padding-right: 100px;
+    height: 386px;
+  }  
+  .content-r img{
+    margin-right: 10x;
+  }
+  #footer{
+    display: table;
+    width: 1200px;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 200;
+  }
+  #footer a{
+    color:rgb(10, 134, 236);
+    cursor: pointer;
+  }
+  #footer h3{
+    padding-right: 2rem;
+  }
+  div.ft{
+    margin-left: 17px;
+  }
+  .ft{
+    display: table-cell;
+    padding-left:1.5rem; 
+  
+  }
+  
+  /*rp menu*/
+  @media screen and (max-width: 991px) and (min-width: 768px) {
+    div#menu {
+        
+        background-color:gray;
+        max-width: 100%;
+        height: 20px;
+        color: black;
+    }
+    a.name{
+        color: white;
+        padding-left: 20px;
+        text-decoration: none;
+    }
+  
+    .banner{ 
+        background-image: none;
+        max-width: 100%;
+        height: 200px;    
+        color: black;
+    }
+    .banner h2{
+        padding-top: 0px;
+        margin-left: 50px;    
+    }
+    .banner p{
+        border-bottom: 1px solid black;
+        padding-bottom: 10px;
+        padding-left: 50px;
+    }
+  
+    .content{
+        max-width: 100%;
+    }
+    .content-r{
+        float: left;
+        margin-top: 1rem;
+        padding-left: 5rem;
+    }
+    #footer{
+        
+        margin-left: 0px;
+        
+    }
+    #footer h3{
+        margin-left: 0px;
+    }
+    .ft{
+        display: block;
+        
+    }
+  
+  }
+  @media screen and (max-width: 767px) {
+  div#header {
+    background-color:gray;
+    max-width: 100%;
+    height: auto;
+    }
+  div#menu{
+    background-color: grey;
+    max-width: 100%;
+  }
+  a.name{
+        color: black;
+        padding-left: 10px;
+        text-decoration: none;
+    }
+  .name{
+    color: gray;
+    padding-left: 20px;
+    text-decoration: none;
+  } 
+  .banner{ 
+    background-image: none;
+    max-width: 100%;
+    height: 150px;    
+    color: black;
+  }
+  .banner h2{
+    padding-top: 5px;
+    margin-left: 0px;    
+  }
+  
+  .banner p{
+    border-bottom: 1px solid black;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding-left: 0px
+   
+  }
+  .main-menu {    
+    
+    text-align: center;
+    color: grey;
+    height: 20px;
+    max-width: 100%;
+    height: auto;
+    
+  }
+  
+  .name:first-child{
+    padding-left: 0px;
+  
+  }
+  
+  .menu-l{
+    float: left;
+    max-width: 100%;
+    height: auto;
+  }
+  .menu-l:first-child{
+    padding-left: 0px;
+  }
+  
+  .menu-r{
+    float: right;
+    max-width: 100%;
+    height: auto;
+    }
+  #content{
+    max-width: 100%;
+    padding-left: 0px;
+  }
+  .title h2{
+    padding-left: 0px;
+  }
+  .title p{
+    padding-left: 0px;
+  }
+  div.content-l{
+    max-width: 100%;
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+  div.content-l img{
+    margin-right: 20px;
+  }
+  .content-r{
+    float: left;
+    padding-left: 0px;
+    margin-left: 15px;
+    
+  }
+  #footer{
+        
+    padding-left: 0px;
+    
+  }
+  #footer h3{
+    margin-left: 0px;
+  }
+  .ft{
+    display: block;
+    padding-left: 0px;
+   
+    
+  }
+  
+  }

@@ -91,7 +91,7 @@ const {users} = json;
 //     });
 //    // console.log(x);
 
-var expr = '6';
+var expr = '11';
    switch (expr) {
     case '1':
         var myArray = users;
@@ -144,9 +144,19 @@ var expr = '6';
         }, []);
         //console.log(myArrayBai3); 
 
-                
-        var myArrayBai1 = users.reduce(function(acc, category){
-            acc = acc.concat(category.first_name+" "+category.last_name);
+            const myArrayFilter=users;
+
+        var boy =myArrayFilter.reduce((a,currentValue)=>{
+        if(currentValue.gender==='Male'&&currentValue.age<40)
+            {
+            a.push(currentValue);
+            }
+            return a;
+        },[]);
+        //console.log(boy);
+                    
+        var myArrayBai1 = users.reduce(function(acc, user){
+            acc = acc.concat(user.first_name+" "+user.last_name);
             return acc;
         }, []);
         console.log(myArrayBai1); 
@@ -171,7 +181,7 @@ var expr = '6';
         //   console.log(c)
         });
     // console.log(x);
-      break;
+         break;
       
       case '8':
       
@@ -189,9 +199,28 @@ var expr = '6';
         console.log(a);
         });
         console.log(x);
+         break;
+
+      case '9':
+
+         break;
+
+      case '10':
+
+         break;
+
+      case '11':
+      //1 và 2 không hiểu đề
+      var myArrayReverse = users.reduce(function(acc, user){
+        acc = acc.concat(user);
+        return acc.reverse();
+      }, []);
+      
+      console.log(myArrayReverse); 
+      
 
 
-      break;
+        break;
     default:
       console.log('Sorry, we are out of ' + expr + '.');
   }
@@ -209,17 +238,7 @@ var expr = '6';
         //1.	Use reduce to create function sum which will calculate the sum of every item in array.
         //2.	Use reduce to create function product which will calculate the product of every item in array.
         //3.	Use reduce to create function reverse which will reverse the position of every item in array.
-        
-// function cau1(){
-//     var json = JSON.parse(data);
-// }
-// fs.readFile('./content.json', (err, data) => {
-//     if (err)
-//       console.log(err);
-//     else {
-//       var json = JSON.parse(data);
-//     //your code using json object
-//     }
-// })
-// Synchronous
-// var json = JSON.parse(fs.readFileSync('./JavaScript Advanced 02 - Higher-Order Functions - Exercises - Mock Data.json').toString());
+        // Dùng hàm reduce từ bài 9:
+        // 1. Viết function Sum tính tổng các phần từ trong mảng
+        // 2. viết hàm Product tính product của mọi phần tử trong mảng
+        // 3. Viết hàn Reverse đảo ngược vị trí các phần tử trong mảng
