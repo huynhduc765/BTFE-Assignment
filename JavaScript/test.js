@@ -8,67 +8,6 @@ function myFunction(a, b) {
 }
 */
 
-// const myArray1 = [1,2,3,4];
-// const sum = myArray1.reduce((acc,currValue,currIndex,array)=>{
-//   return acc+currValue;
-// },0);
-// const agv = sum /myArray1.length;
-// console.log(myArray1);
-// console.log(agv);
-
-
-
-// const myArray1 = users;
-// const sum = myArray1.reduce((acc,currValue,currIndex,array)=>{
-//   return acc+currValue;
-// },0);
-// const agv = sum /myArray1.length;
-// console.log(myArray1);
-// console.log(agv);
-
-// var initialValue = 0;
-// const reduced = users.reduce((acc, item ,array) => {
-//    acc = item.age;
-//   return acc += item.age;
-//   //acc=item.age;
-
-// },initialValue);
-
-// console.log(reduced);
-
-
-
-// var sum = users.reduce(
-//     (accumulator, currentValue) => accumulator +currentValue
-//     ,
-
-// );
-//const agv = sum /users.length;
-
-//console.log(sum); 
-//console.log(agv);
-
-// var myArrayBai1 = users.reduce(function(acc, category){
-//  acc = acc.concat(category.first_name+" "+category.last_name);
-//  return acc;
-// }, []);
-// //console.log(myArrayBai1); 
-
-
-// const transformed = users.map(({id, last_name: lastName, first_name: firstName,email,gender,salary }) => ({id, lastName, firstName, email,gender,salary }));
-// console.log(transformed);
-
-// users.reduce(callback[, initialValue])
-
-
-// var myArrayBai3 = users.reduce(function(acc, user){
-//   acc = acc.concat(user);
-//   return acc;
-// }, []);
-
-
-// let small_animals = users;
-
 // for (let i = 0; i < users.length; i ++) {
 //     if (users[i].age < 40 ) {
 //       var newElements = callback(users)
@@ -147,11 +86,9 @@ function myFunction(a, b) {
 // function reverseString(users) {
 //   return users.reduce((ret, character) => (character + ret));
 //  }
-//  var x = reverseString(users,(a,b,c)=>{
-//   console.log(a)
-// // console.log(b)
-// //   console.log(c)
-// });
+//  reverseString(users)
+// console.log(b)
+//   console.log(c)
 
 // const reduce = function(iterable, reduceFn, accumulator){
 //   for(let i of iterable){
@@ -182,10 +119,54 @@ function myFunction(a, b) {
 // let camel =camelCaseIt(baz);
 // console.log(camel)
 
+// function myFunc(theObject) {
+//   theObject.brand = "Toyota";
+// }
+// var mycar = {
+//   brand: "Honda",
+//   model: "Accord",
+//   year: 1998
+// };
 
-const transformed = users.map(({id, last_name: lastName, first_name: firstName,email,gender,salary }) => ({id, lastName, firstName, email,gender,salary }));
-//console.log(transformed);
-transformed.reduce(function(array){
-return array;
-};
-console.log(abc);
+// console.log(mycar.brand);
+
+// myFunc(mycar);
+
+// console.log(mycar.brand);
+
+
+
+
+// const ngu= function(array,value,defaultvalue){
+//   for(let i=array.lenght-1; i>=0; i--){
+//     defaultvalue = value(defaultvalue,array[i])
+//     console.log(defaultvalue);
+//   }
+//   return "";
+// }
+// console.log(ngu(users,(acc,elem)=>elem,""));
+
+// camelize = function camelize(str) {
+//   return str.replace(/\W+(.)/g, function(match, chr)
+//    {
+//         return chr.toUpperCase();
+//     });
+// }
+// var a= users;
+// console.log(camelize(a));
+// console.log(camelize("JavaScriptExercises"));
+
+// ---------------Implement map using reduce--------------------------
+// var reduce = function(array, value, defaultvalue){
+//     defaultvalue = value(defaultvalue, array)
+//     return defaultvalue;
+// }
+// function map(arr10, callback){
+//     var returnValue = []      
+//     var newElements = callback(reduce(arr10, (acc,elem)=>elem , ""))
+//     returnValue.push(newElements)       
+//     return returnValue
+// }
+// var x = map(user,(a)=>{
+//     console.log(a)
+// });

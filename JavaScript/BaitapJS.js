@@ -8,7 +8,7 @@ const {users} = json;
 //    console.log(myArray[i].id + myArray[i].first_name);
 // }
 
-// let myArray = users;
+// let myArray = users;s
 // function forEach(myArray, callback){
 //     for(var i=0 ; i< myArray.length; i++){
 //         callback(myArray[i].first_name,i,myArray)
@@ -159,9 +159,23 @@ var expr = '11';
             acc = acc.concat(user.first_name+" "+user.last_name);
             return acc;
         }, []);
-        console.log(myArrayBai1); 
+        //console.log(myArrayBai1); 
 
-
+        const reduceBai4_reducer = (acc, cur) => {
+            var result = {};
+            result.id = cur.id;
+            result.firstName = cur.first_name;
+            result.lastName = cur.last_name;
+            result.email = cur.email;
+            result.gender = cur.gender;
+            result.age = cur.age;
+            result.salary = cur.salary;
+            acc.push(result);
+            return acc;
+          };
+          var reduceBai4 = users.reduce(reduceBai4_reducer, []);
+         //console.log(reduceBai4);
+          
 
         break;
     case '7':
@@ -203,6 +217,17 @@ var expr = '11';
 
       case '9':
 
+      let arr9=users;
+      function reduce1(arr9,reducer,initialValue){
+          let accumulator = initialValue === undefined ? 0 : initialValue
+          for(let i=0;i<arr9.length;i++)
+              accumulator = reducer(accumulator, arr9[i], i, arr9);
+          return accumulator;
+      }
+      var x2=reduce1(arr9,(a,b,c,d)=>{
+          console.log(d);
+      });
+      // console.log(x2)
          break;
 
       case '10':
@@ -210,14 +235,22 @@ var expr = '11';
          break;
 
       case '11':
-      //1 và 2 không hiểu đề
-      var myArrayReverse = users.reduce(function(acc, user){
-        acc = acc.concat(user);
-        return acc.reverse();
-      }, []);
-      
-      console.log(myArrayReverse); 
-      
+      //câu 1 và 2 không hiểu đề
+            
+        let myArray11 = users;
+        function Reverse(myArray7, callback){
+            var returnValue = [];
+            for(var i=myArray7.length-1 ; i>=0 ; i--){
+                var newElements = callback(users[i])
+                returnValue.push(newElements)
+            }
+            return returnValue
+        }
+        var x = Reverse(myArray11,(a,b,c)=>{
+            console.log(a)
+        // console.log(b)
+        //   console.log(c)
+        });
 
 
         break;
